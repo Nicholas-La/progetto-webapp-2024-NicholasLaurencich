@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="it">
+<head>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/checkout.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand"><a href="/index.html" style="color:inherit;text-decoration:none">FermaGioco</a></div>
+    <div class="nav-right" id="nav-right"></div>
+  </nav>
+  <main class="container" style="max-width:700px;margin-top:20px">
+    <h2>Checkout</h2>
+    
+    <div class="card" style="margin-bottom:20px">
+      <h3>I tuoi dati</h3>
+      <div id="userData">Caricamento...</div>
+      <div style="display:flex;justify-content:flex-end;margin-top:10px">
+        <button id="editProfileBtn" class="ghost">Modifica profilo</button>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-bottom:20px">
+      <h3>Metodo di pagamento</h3>
+      <div id="paymentError" class="error-msg" style="display:none">Non hai carte salvate. Per continuare, aggiungine una nel tuo profilo.</div>
+      <div id="paymentOptions" class="shipping-options">Caricamento...</div>
+      <div style="display:flex;justify-content:flex-end;margin-top:10px">
+        <button id="editPaymentBtn" class="ghost">Modifica profilo</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px">
+      <h3>Metodo di spedizione</h3>
+      <div class="shipping-options">
+          <div class="shipping-option">
+              <input type="radio" id="standard" name="shipping" value="standard" checked>
+              <div class="shipping-details">
+                  <label for="standard">Standard (2-3 giorni)</label>
+                  <p style="margin:0;font-size:0.9em;color:var(--muted)">Gratuita per ordini maggiori di 50€</p>
+              </div>
+              <span id="standardPrice" class="shipping-price">0.00€</span>
+          </div>
+          
+          <div class="shipping-option">
+              <input type="radio" id="express" name="shipping" value="express">
+              <div class="shipping-details">
+                  <label for="express">Rapida (1 giorno)</label>
+                  <p style="margin:0;font-size:0.9em;color:var(--muted)">Costo fisso</p>
+              </div>
+              <span class="shipping-price">10.00€</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px">
+      <h3>Riepilogo ordine</h3>
+      <div id="orderSummary">Caricamento...</div>
+      <div class="checkout-summary">
+        <p>Subtotale: <span id="subtotal"></span></p>
+        <p>Spedizione: <span id="shippingTotal"></span></p>
+        <p><strong>Totale finale: <span id="finalTotal"></span></strong></p>
+      </div>
+      <button id="confirmBtn" style="width:100%;margin-top:20px">Conferma e paga</button>
+    </div>
+  </main>
+  
+  <a href="#" id="scrollToTopBtn" class="scroll-to-top-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="16 12 12 8 8 12"></polyline>
+    <line x1="12" y1="16" x2="12" y2="8"></line>
+  </svg>
+</a>
+</body>
+</html>

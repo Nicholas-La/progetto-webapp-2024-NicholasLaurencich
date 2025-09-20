@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="it">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrazione - FermaGioco</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+  <script defer src="js/register.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand"><a href="/index.html" style="color:inherit;text-decoration:none">FermaGioco</a></div>
+    <div class="nav-right" id="nav-right"></div>
+  </nav>
+  <main class="container">
+    <div class="card" style="max-width:700px;margin:20px auto">
+      <h2>Creazione account</h2>
+
+      <div id="err-general" class="error-msg" style="margin-bottom:8px"></div>
+
+      <form id="regForm" novalidate>
+        <div class="form-row">
+          <label>Nome
+            <input id="nome" autocomplete="given-name" />
+          </label>
+          <div id="err-nome" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Cognome
+            <input id="cognome" autocomplete="family-name" />
+          </label>
+          <div id="err-cognome" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Email
+            <input id="email" type="email" autocomplete="email" />
+          </label>
+          <div id="err-email" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Password
+            <input id="password" type="password" autocomplete="new-password" />
+          </label>
+          <div id="err-password" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Conferma Password
+            <input id="password_confirm" type="password" autocomplete="new-password" />
+          </label>
+          <div id="err-password_confirm" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Via
+            <input id="via" autocomplete="street-address" />
+          </label>
+          <div id="err-via" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Città/Paese
+            <input id="paese" autocomplete="address-level2" />
+          </label>
+          <div id="err-paese" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>CAP
+            <input id="cap" autocomplete="postal-code" />
+          </label>
+          <div id="err-cap" class="error-msg"></div>
+        </div>
+
+        <hr style="border:0;border-top:1px solid #2b3566;margin:16px 0" />
+        <h3 style="margin-top:0">Dati di pagamento</h3>
+
+        <div class="form-row">
+          <label>Numero carta
+            <input id="card_number" inputmode="numeric" placeholder="es. 4111 1111 1111 1111" />
+          </label>
+          <div id="err-card" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Intestatario carta
+            <input id="card_holder" />
+          </label>
+          <div id="err-holder" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>Scadenza (MM/AA)
+            <input id="expiry" placeholder="MM/AA" inputmode="numeric" />
+          </label>
+          <div id="err-expiry" class="error-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <label>CVV
+            <input id="cvv" inputmode="numeric" maxlength="4" placeholder="000" />
+          </label>
+          <div id="err-cvv" class="error-msg"></div>
+        </div>
+
+        <div class="form-row" style="margin-top:8px">
+          <label style="display:flex;align-items:center;gap:8px">
+            <input id="privacy" type="checkbox" />
+            <a href="/privacy.html">Accetto l'informativa sulla privacy</a>
+          </label>
+          <div id="err-privacy" class="error-msg"></div>
+        </div>
+
+        <div style="display:flex;justify-content:flex-end;margin-top:20px">
+          <button type="submit">Registrati</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <a href="#" id="scrollToTopBtn" class="scroll-to-top-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="16 12 12 8 8 12"></polyline>
+    <line x1="12" y1="16" x2="12" y2="8"></line>
+  </svg>
+</a>
+</body>
+</html>

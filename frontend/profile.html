@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang='it'>
+<head>
+
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width,initial-scale=1'/>
+<title>Profilo</title>
+<link rel='stylesheet' href='css/styles.css'/>
+<script defer src='js/app.js'></script>
+<script defer src='js/profile.js'></script>
+</head>
+<body>
+<nav class="navbar">
+<div class="brand"><a href="/index.html" style="color:inherit;text-decoration:none">FermaGioco</a></div>
+<div class="nav-right" id="nav-right"></div>
+</nav>
+<main class='container'>
+<div class='card' style='max-width:700px;margin:20px auto'>
+<h2>Profilo</h2>
+<form id='profileForm'>
+<div class='form-row'>
+<label>Nome
+<input id='first_name' readonly/>
+</label>
+<div id='err-first_name' class='error-msg'></div>
+</div>
+<div class='form-row'>
+<label>Cognome
+<input id='last_name' readonly/>
+</label>
+<div id='err-last_name' class='error-msg'></div>
+</div>
+<div class='form-row'>
+<label>Via
+<input id='via' readonly/>
+</label>
+</div>
+<div class='form-row'>
+<label>Città/Paese
+<input id='paese' readonly/>
+</label>
+</div>
+<div class='form-row'>
+<label>CAP
+<input id='cap' readonly/>
+</label>
+<div id='err-address' class='error-msg'></div>
+</div>
+<div style='display:flex;gap:8px;justify-content:flex-end'>
+<button type='button' id='editBtn'>Modifica profilo</button>
+<button id='saveBtn' type='submit' disabled>Salva modifiche</button>
+</div>
+</form>
+
+<hr style='border:0;border-top:1px solid #2b3566;margin:16px 0'/>
+
+<h3>Carte di pagamento</h3>
+<div class='profile-cards'>
+<div id='cardsList'></div>
+<form id='addCardForm'>
+<div class='form-row'>
+<label>Numero carta
+<input id='card_number' placeholder='es. 4111 1111 1111 1111' inputmode="numeric"/>
+</label>
+<div id='err-card' class='error-msg'></div>
+</div>
+<div class='form-row'>
+<label>Intestatario carta
+<input id='card_holder'/>
+</label>
+<div id='err-holder' class='error-msg'></div>
+</div>
+<div class='form-row'>
+<label>Scadenza (MM/AA)
+<input id='expiry' placeholder='MM/AA' inputmode="numeric"/>
+</label>
+<div id='err-expiry' class='error-msg'></div>
+</div>
+<div class='form-row'>
+<label>CVV
+<input id='cvv' placeholder='000' inputmode="numeric" maxlength="4"/>
+</label>
+<div id='err-cvv' class='error-msg'></div>
+</div>
+<div style='display:flex;justify-content:flex-end;margin-top:20px'>
+<button type='submit'>Aggiungi carta</button>
+</div>
+</form>
+</div>
+
+<hr style='border:0;border-top:1px solid #2b3566;margin:16px 0'/>
+
+<h3>Cambia password</h3>
+<div class='password-section'>
+<form id="passwordForm">
+<div class='form-row'>
+<label>Nuova password
+<input id='new_password' type='password' autocomplete='new-password'/>
+</label>
+</div>
+<div class='form-row'>
+<label>Conferma nuova password
+<input id='confirm_password' type='password' autocomplete='new-password'/>
+</label>
+</div>
+<div id="err-password" class="error-msg"></div>
+<div style='display:flex;justify-content:flex-end;margin-top:20px'>
+<button type='submit'>Cambia password</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+
+<a href="#" id="scrollToTopBtn" class="scroll-to-top-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="16 12 12 8 8 12"></polyline>
+    <line x1="12" y1="16" x2="12" y2="8"></line>
+  </svg>
+</a>
+
+</body>
+</html>

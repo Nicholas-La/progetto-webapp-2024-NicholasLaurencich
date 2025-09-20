@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="utf-8"/>
+<title>Grazie</title>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<header><h1>Grazie</h1></header>
+<main class="container">
+  <p>Grazie per aver effettuato l'ordine.</p>
+  <div id="msg">Caricamento...</div>
+  
+  <a href="/orders.html" style="background:var(--acc); color:#fff; border:none; padding:10px 12px; border-radius:10px; cursor:pointer; text-decoration:none; margin-top: 1rem; display: block; text-align: center;">Vai ai miei ordini</a>
+</main>
+<script>
+const id = new URLSearchParams(location.search).get('id') || '';
+document.getElementById('msg').textContent = 'ID Ordine: ' + id;
+
+// Reindirizza alla homepage se l'utente tenta di tornare  non funziona
+window.addEventListener('popstate', function(event) {
+    // Reindirizza l'utente a index.html
+    window.location.href = 'index.html';
+});
+
+// Impedisce di tornare alla pagina precedente caricando la stessa URL non funziona
+window.history.replaceState(null, '', location.href);
+
+</script>
+</body>
+</html>
