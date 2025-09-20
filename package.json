@@ -1,0 +1,19 @@
+{
+  "name": "fermaGioco",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "seed": "node backend/seed.js"
+    
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "sqlite": "^4.2.1",
+    "sqlite3": "^5.1.7"
+  }
+}
