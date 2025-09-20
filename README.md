@@ -4,6 +4,7 @@ Sito: ecommerce di videogiochi, console e accessori;
 Proprietario: Nicholas Laurencich, 163040;
 -----------------------------------------------------
 Istruzioni per installazione e esecuzione (versione windows)
+-scaricare la cartella zip ed estrarla
 -verificare di avere node.js installato sulla macchina, altrimenti installalarlo dal sito web di node.js
 -aprire il terminale (cmd)
 -se tutto è andato bene il comando npm -v restituisce la versione di npm
@@ -40,4 +41,5 @@ POST /api/login 200 205.787 ms - 100 login effettuato con successo
 DELETE /api/cards/2 204 11.890 ms - - chiedo di eliminare una carta salvata
 GET /api/cards 200 3.986 ms - 77 risposta per corretta eliminazione
 PUT /api/me 200 9.532 ms - 201 cambia il nome in uno con formato corretto
+
 -----------------------------------------------------
